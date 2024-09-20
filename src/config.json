@@ -1,0 +1,6 @@
+{
+    "bootstrap.servers": "localhost:9093",
+    "topic": "test.topic",
+    "client.id": "kafka",
+    "dr_cb": true
+}
