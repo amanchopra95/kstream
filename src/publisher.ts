@@ -12,9 +12,16 @@ export class KafkaPublisher {
 
         const kStream = new KStream();
 
-        await kStream.connect(this.deliveryReport);
+        await kStream.producerConnect(this.deliveryReport);
 
-        await kStream.produceMessages("Some message");
+        kStream.produceMessages("Some message");
+
+        let counter = 1;
+
+        setInterval(() => {
+            kStream.produceMessages(JSON.stringify({Counter: counter}));
+            counter++;
+        }, 5000)
 
     }
 

@@ -5,11 +5,13 @@ export class Config {
     public static topic: string | undefined;
     public static clientId: string | undefined;
     public static deliveryReportEnabled: boolean | undefined;
+    public static groupId: string | undefined;
 
     public static init() {
         Config.bootStrapServers = config["bootstrap.servers"];
         Config.clientId = config["client.id"];
         Config.topic = config.topic;
         Config.deliveryReportEnabled = config.dr_cb;
+        Config.groupId = config["group.id"]
     }
 }

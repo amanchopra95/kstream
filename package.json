@@ -6,7 +6,9 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "rm -rf ./dist; tsc",
-    "publisher": "npm run build && node dist/publisher.js"
+    "publisher": "npm run build && node dist/publisher.js",
+    "consumer": "npm run build && node dist/consumer.js"
+
   },
   "keywords": [],
   "author": "",
